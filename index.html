@@ -6,6 +6,7 @@
     <title>AIvortx</title>
     <link rel="icon" type="image/png" href="/favicon.png">
     <style>
+        /* Your CSS styles here */
         body {
             margin: 0;
             padding: 0;
@@ -31,51 +32,8 @@
         }
 
         .container {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
-            height: 100vh;
-        }
-
-        .circle {
-            width: 200px;
-            height: 200px;
-            background-color: #007bff;
-            border-radius: 50%;
-            position: relative;
-            animation: rotate 10s linear infinite;
-        }
-
-        @keyframes rotate {
-            0% {
-                transform: rotate(0deg);
-            }
-            100% {
-                transform: rotate(360deg);
-            }
-        }
-
-        .text {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
             text-align: center;
-            font-size: 1.5em;
-            font-weight: bold;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            animation: blink 1s infinite alternate;
-        }
-
-        @keyframes blink {
-            0% {
-                opacity: 0.5;
-            }
-            100% {
-                opacity: 1;
-            }
+            padding: 20px;
         }
 
         .content {
@@ -116,6 +74,23 @@
         .feature p {
             font-size: 1.1em;
         }
+
+        .social-links {
+            margin-top: 20px;
+        }
+
+        .social-links a {
+            display: inline-block;
+            margin: 0 10px;
+            color: #fff;
+            font-size: 1.5em;
+            text-decoration: none;
+            transition: transform 0.3s ease;
+        }
+
+        .social-links a:hover {
+            transform: scale(1.2);
+        }
     </style>
 </head>
 <body>
@@ -124,27 +99,53 @@
         <p>Your Portal to the Future</p>
     </header>
     <div class="container">
-        <div class="circle">
-            <div class="text">Welcome to AIvortx</div>
-        </div>
         <div class="content">
-            <p>AIvortx is your ultimate destination for cutting-edge artificial intelligence solutions. Harness the power of AI to revolutionize your business, research, and everyday life.</p>
-            <div class="features">
-                <div class="feature">
-                    <h2>Advanced Algorithms</h2>
-                    <p>Our AI algorithms are designed to deliver unparalleled performance and accuracy.</p>
+            <!-- Page content -->
+            <div id="home">
+                <p>AIvortx is your ultimate destination for cutting-edge artificial intelligence solutions. Harness the power of AI to revolutionize your business, research, and everyday life.</p>
+                <div class="features">
+                    <div class="feature">
+                        <h2>Advanced Algorithms</h2>
+                        <p>Our AI algorithms are designed to deliver unparalleled performance and accuracy.</p>
+                    </div>
+                    <div class="feature">
+                        <h2>Machine Learning</h2>
+                        <p>Unlock the potential of machine learning to automate tasks and gain insights from your data.</p>
+                    </div>
+                    <div class="feature">
+                        <h2>Deep Neural Networks</h2>
+                        <p>Experience the power of deep neural networks for image recognition, natural language processing, and more.</p>
+                    </div>
                 </div>
-                <div class="feature">
-                    <h2>Machine Learning</h2>
-                    <p>Unlock the potential of machine learning to automate tasks and gain insights from your data.</p>
-                </div>
-                <div class="feature">
-                    <h2>Deep Neural Networks</h2>
-                    <p>Experience the power of deep neural networks for image recognition, natural language processing, and more.</p>
+            </div>
+            
+            <div id="about" style="display: none;">
+                <h2>About Us</h2>
+                <p>We are a team of passionate AI enthusiasts dedicated to pushing the boundaries of artificial intelligence technology.</p>
+            </div>
+
+            <div id="contact" style="display: none;">
+                <h2>Contact Us</h2>
+                <p>Feel free to reach out to us via email at <a href="mailto:info@aivortx.com">info@aivortx.com</a> or through our social media channels:</p>
+                <div class="social-links">
+                    <a href="https://twitter.com/AIvortx" target="_blank">Twitter</a>
+                    <a href="https://www.instagram.com/AIvortx/" target="_blank">Instagram</a>
+                    <a href="https://www.facebook.com/AIvortx/" target="_blank">Facebook</a>
                 </div>
             </div>
         </div>
     </div>
+
+    <script>
+        // Function to switch between pages
+        function showPage(pageId) {
+            var pages = document.querySelectorAll('.content > div');
+            for (var i = 0; i < pages.length; i++) {
+                pages[i].style.display = 'none';
+            }
+            document.getElementById(pageId).style.display = 'block';
+        }
+    </script>
     <script>
         // Disable right-click
         document.addEventListener('contextmenu', function(e) {
