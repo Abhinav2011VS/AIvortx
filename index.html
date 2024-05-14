@@ -18,17 +18,47 @@
         .header {
             text-align: center;
             padding: 50px 0;
+            animation: fade-in 2s ease-out;
+        }
+
+        @keyframes fade-in {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
         }
 
         .header h1 {
             font-size: 3em;
             margin: 0;
             letter-spacing: 3px;
+            animation: slide-up 2s ease-out;
+        }
+
+        @keyframes slide-up {
+            0% {
+                transform: translateY(-50px);
+            }
+            100% {
+                transform: translateY(0);
+            }
         }
 
         .header p {
             font-size: 1.2em;
             margin-top: 20px;
+            animation: slide-down 2s ease-out;
+        }
+
+        @keyframes slide-down {
+            0% {
+                transform: translateY(50px);
+            }
+            100% {
+                transform: translateY(0);
+            }
         }
 
         .container {
@@ -39,11 +69,13 @@
         .content {
             margin-top: 50px;
             text-align: center;
+            animation: fade-in 2s ease-out;
         }
 
         .content p {
             font-size: 1.2em;
             line-height: 1.6;
+            animation: slide-up 2s ease-out;
         }
 
         .features {
@@ -60,6 +92,7 @@
             border: 2px solid #007bff;
             border-radius: 10px;
             transition: transform 0.3s ease;
+            animation: fade-in 2s ease-out;
         }
 
         .feature:hover {
@@ -91,11 +124,40 @@
         .social-links a:hover {
             transform: scale(1.2);
         }
+
+        /* Blinking animation for text */
+        .blink {
+            animation: blink 1s infinite alternate;
+        }
+
+        @keyframes blink {
+            0% {
+                opacity: 0.5;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+
+        /* Floating animation for social links */
+        .floating {
+            animation: float 3s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-10px);
+            }
+        }
+
     </style>
 </head>
 <body>
     <header class="header">
-        <h1>AIvortx</h1>
+        <h1 class="blink">AIvortx</h1>
         <p>Your Portal to the Future</p>
     </header>
     <div class="container">
@@ -128,9 +190,9 @@
                 <h2>Contact Us</h2>
                 <p>Feel free to reach out to us via email at <a href="mailto:info@aivortx.com">info@aivortx.com</a> or through our social media channels:</p>
                 <div class="social-links">
-                    <a href="https://twitter.com/AIvortx" target="_blank">Twitter</a>
-                    <a href="https://www.instagram.com/AIvortx/" target="_blank">Instagram</a>
-                    <a href="https://www.facebook.com/AIvortx/" target="_blank">Facebook</a>
+                    <a href="https://twitter.com/AIvortx" target="_blank" class="floating">Twitter</a>
+                    <a href="https://www.instagram.com/AIvortx/" target="_blank" class="floating">Instagram</a>
+                    <a href="https://www.facebook.com/AIvortx/" target="_blank" class="floating">Facebook</a>
                 </div>
             </div>
         </div>
