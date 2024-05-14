@@ -1,9 +1,95 @@
 <!DOCTYPE html>
-<hmtl>
-  <head>
-    
-  </head>
-  <body>
-    <h1>Welcome to AIvortx</h1>
-  </body>
-</hmtl>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AIvortx</title>
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #111;
+            color: #fff;
+        }
+
+        .header {
+            text-align: center;
+            padding: 50px 0;
+        }
+
+        .header h1 {
+            font-size: 3em;
+            margin: 0;
+            letter-spacing: 3px;
+        }
+
+        .header p {
+            font-size: 1.2em;
+            margin-top: 20px;
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .circle {
+            width: 200px;
+            height: 200px;
+            background-color: #007bff;
+            border-radius: 50%;
+            position: relative;
+            animation: rotate 10s linear infinite;
+        }
+
+        @keyframes rotate {
+            0% {
+                transform: rotate(0deg);
+            }
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        .text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            font-size: 1.5em;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .blink {
+            animation: blink 1s infinite alternate;
+        }
+
+        @keyframes blink {
+            0% {
+                opacity: 0.5;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <h1>AIvortx</h1>
+        <p>Your Portal to the Future</p>
+    </header>
+    <div class="container">
+        <div class="circle">
+            <div class="text blink">Loading...</div>
+        </div>
+    </div>
+</body>
+</html>
