@@ -34,6 +34,7 @@
             display: flex;
             justify-content: center;
             align-items: center;
+            flex-direction: column;
             height: 100vh;
         }
 
@@ -65,9 +66,6 @@
             font-weight: bold;
             text-transform: uppercase;
             letter-spacing: 2px;
-        }
-
-        .blink {
             animation: blink 1s infinite alternate;
         }
 
@@ -79,6 +77,45 @@
                 opacity: 1;
             }
         }
+
+        .content {
+            margin-top: 50px;
+            text-align: center;
+        }
+
+        .content p {
+            font-size: 1.2em;
+            line-height: 1.6;
+        }
+
+        .features {
+            display: flex;
+            justify-content: center;
+            margin-top: 50px;
+        }
+
+        .feature {
+            flex: 0 1 30%;
+            margin: 0 20px;
+            text-align: center;
+            padding: 20px;
+            border: 2px solid #007bff;
+            border-radius: 10px;
+            transition: transform 0.3s ease;
+        }
+
+        .feature:hover {
+            transform: translateY(-10px);
+        }
+
+        .feature h2 {
+            font-size: 1.5em;
+            margin-bottom: 10px;
+        }
+
+        .feature p {
+            font-size: 1.1em;
+        }
     </style>
 </head>
 <body>
@@ -88,7 +125,24 @@
     </header>
     <div class="container">
         <div class="circle">
-            <div class="text blink">Loading...</div>
+            <div class="text">Welcome to AIvortx</div>
+        </div>
+        <div class="content">
+            <p>AIvortx is your ultimate destination for cutting-edge artificial intelligence solutions. Harness the power of AI to revolutionize your business, research, and everyday life.</p>
+            <div class="features">
+                <div class="feature">
+                    <h2>Advanced Algorithms</h2>
+                    <p>Our AI algorithms are designed to deliver unparalleled performance and accuracy.</p>
+                </div>
+                <div class="feature">
+                    <h2>Machine Learning</h2>
+                    <p>Unlock the potential of machine learning to automate tasks and gain insights from your data.</p>
+                </div>
+                <div class="feature">
+                    <h2>Deep Neural Networks</h2>
+                    <p>Experience the power of deep neural networks for image recognition, natural language processing, and more.</p>
+                </div>
+            </div>
         </div>
     </div>
     <script>
