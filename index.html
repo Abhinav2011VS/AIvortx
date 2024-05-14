@@ -91,5 +91,20 @@
             <div class="text blink">Loading...</div>
         </div>
     </div>
+    <script>
+        // Disable right-click
+        document.addEventListener('contextmenu', function(e) {
+            e.preventDefault();
+        });
+
+        // Disable Ctrl+U, Fn+F12, and F12
+        document.onkeydown = function(e) {
+            if (e.ctrlKey && e.keyCode == 'U'.charCodeAt(0) ||
+                e.keyCode == 123 ||
+                e.keyCode == 85 && e.keyCode == 12) {
+                return false;
+            }
+        }
+    </script>
 </body>
 </html>
