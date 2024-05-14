@@ -96,7 +96,7 @@
         }
 
         .feature:hover {
-            transform: translateY(-10px);
+            transform: scale(1.05);
         }
 
         .feature h2 {
@@ -153,6 +153,15 @@
             }
         }
 
+        /* Transformer-style animations */
+        .transform-box {
+            transition: all 0.5s ease-in-out;
+        }
+
+        .transform-box:hover {
+            transform: rotate(360deg) scale(1.2);
+            box-shadow: 0 0 20px rgba(0, 123, 255, 0.5);
+        }
     </style>
 </head>
 <body>
@@ -166,15 +175,15 @@
             <div id="home">
                 <p>AIvortx is your ultimate destination for cutting-edge artificial intelligence solutions. Harness the power of AI to revolutionize your business, research, and everyday life.</p>
                 <div class="features">
-                    <div class="feature">
+                    <div class="feature transform-box">
                         <h2>Advanced Algorithms</h2>
                         <p>Our AI algorithms are designed to deliver unparalleled performance and accuracy.</p>
                     </div>
-                    <div class="feature">
+                    <div class="feature transform-box">
                         <h2>Machine Learning</h2>
                         <p>Unlock the potential of machine learning to automate tasks and gain insights from your data.</p>
                     </div>
-                    <div class="feature">
+                    <div class="feature transform-box">
                         <h2>Deep Neural Networks</h2>
                         <p>Experience the power of deep neural networks for image recognition, natural language processing, and more.</p>
                     </div>
