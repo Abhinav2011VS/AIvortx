@@ -16,55 +16,57 @@
 
   .loading {
     width: 100px;
-    height: 100px;
+    height: 50px;
     position: relative;
+    overflow: hidden;
+  }
+
+  .infinity {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 50px;
+    height: 25px;
+    transform: translate(-50%, -50%) rotate(45deg);
     animation: rotateInfinity 2s linear infinite;
   }
 
-  .loading::before,
-  .loading::after {
-    content: "";
+  .line {
     position: absolute;
     top: 0;
-    left: 50%;
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
+    left: 0;
+    width: 100%;
+    height: 100%;
     background-color: #3498db;
-    transform: translateX(-50%);
-    animation: pulse 2s infinite alternate;
-  }
-
-  .loading::after {
-    top: auto;
-    bottom: 0;
-    transform: translateX(-50%) rotate(90deg);
+    animation: moveLine 2s linear infinite;
   }
 
   @keyframes rotateInfinity {
     0% {
-      transform: rotate(0deg);
+      transform: translate(-50%, -50%) rotate(45deg);
     }
     100% {
-      transform: rotate(360deg);
+      transform: translate(-50%, -50%) rotate(405deg);
     }
   }
 
-  @keyframes pulse {
+  @keyframes moveLine {
     0% {
-      transform: scale(1);
-      opacity: 1;
+      left: 0;
     }
     100% {
-      transform: scale(1.5);
-      opacity: 0;
+      left: 100%;
     }
   }
 </style>
 </head>
 <body>
 
-<div class="loading"></div>
+<div class="loading">
+  <div class="infinity">
+    <div class="line"></div>
+  </div>
+</div>
 
 </body>
 </html>
