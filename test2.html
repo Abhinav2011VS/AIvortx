@@ -3,70 +3,62 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Infinity Loading Animation</title>
+<title>Loading Page</title>
 <style>
   body {
+    margin: 0;
+    padding: 0;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
-    margin: 0;
     background-color: #f0f0f0;
   }
 
-  .loading {
+  .loader {
+    font-size: 50px;
+    position: relative;
     width: 100px;
     height: 50px;
-    position: relative;
-    overflow: hidden;
   }
 
   .infinity {
+    width: 54px;
+    height: 27px;
+    position: relative;
+    overflow: hidden;
+    animation: move 2s infinite;
+  }
+
+  .beam {
     position: absolute;
+    width: 40px;
+    height: 8px;
+    background-color: #007bff;
+    border-radius: 50%;
     top: 50%;
     left: 50%;
-    width: 50px;
-    height: 25px;
-    transform: translate(-50%, -50%) rotate(45deg);
-    animation: rotateInfinity 2s linear infinite;
+    transform: translate(-50%, -50%);
+    animation: moveBeam 2s infinite;
   }
 
-  .line {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: #3498db;
-    animation: moveLine 2s linear infinite;
+  @keyframes move {
+    0% {left: 0;}
+    100% {left: -54px;}
   }
 
-  @keyframes rotateInfinity {
-    0% {
-      transform: translate(-50%, -50%) rotate(45deg);
-    }
-    100% {
-      transform: translate(-50%, -50%) rotate(405deg);
-    }
-  }
-
-  @keyframes moveLine {
-    0% {
-      left: 0;
-    }
-    100% {
-      left: 100%;
-    }
+  @keyframes moveBeam {
+    0% {left: 0;}
+    100% {left: 54px;}
   }
 </style>
 </head>
 <body>
-
-<div class="loading">
-  <div class="infinity">
-    <div class="line"></div>
+  <div class="loader">
+    <div class="infinity">
+      &#8734; <!-- Infinity symbol -->
+      <div class="beam"></div>
+    </div>
   </div>
-</div>
-
 </body>
 </html>
