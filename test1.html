@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Transforming Box Animation</title>
+<title>Transformers Animation</title>
 <style>
   body {
     display: flex;
@@ -11,14 +11,14 @@
     align-items: center;
     height: 100vh;
     margin: 0;
-    background-color: #f0f0f0;
+    background-color: #1f1f1f;
   }
 
   .container {
-    width: 200px;
-    height: 200px;
+    width: 300px;
+    height: 300px;
     position: relative;
-    overflow: hidden;
+    perspective: 1000px;
   }
 
   .box {
@@ -26,7 +26,12 @@
     height: 100%;
     background-color: #3498db;
     position: absolute;
-    transition: all 1s ease;
+    transform-style: preserve-3d;
+    transition: transform 2s ease;
+  }
+
+  .container:hover .box {
+    transform: rotateX(180deg) rotateY(180deg) rotateZ(180deg);
   }
 
   .text {
@@ -34,18 +39,8 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    opacity: 0;
     font-size: 24px;
     color: white;
-    transition: opacity 0.5s ease-in-out;
-  }
-
-  .container:hover .box {
-    width: 50%;
-  }
-
-  .container:hover .text {
-    opacity: 1;
   }
 </style>
 </head>
