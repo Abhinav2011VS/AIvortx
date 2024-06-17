@@ -28,12 +28,13 @@
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
+            pointer-events: none; /* Disable pointer events on the iframe */
         }
     </style>
 </head>
 <body>
     <div class="video-background">
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/rDPBxJh9NWQ?autoplay=1&loop=1&playlist=rDPBxJh9NWQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/rDPBxJh9NWQ?autoplay=1&mute=1&controls=0&loop=1&playlist=rDPBxJh9NWQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     </div>
     <div class="content">
         <!-- Your content goes here -->
