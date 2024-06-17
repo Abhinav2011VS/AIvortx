@@ -4,233 +4,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AIvortx</title>
-    <link rel="icon" type="image/png" href="/favicon.png">
-    <style>
-        /* Your CSS styles here */
-        body {
-            margin: 0;
-            padding: 0;
-            font-family: Arial, sans-serif;
-            background-color: #111;
-            color: #fff;
-        }
-
-        .header {
-            text-align: center;
-            padding: 50px 0;
-            animation: fade-in 2s ease-out;
-        }
-
-        @keyframes fade-in {
-            0% {
-                opacity: 0;
-            }
-            100% {
-                opacity: 1;
-            }
-        }
-
-        .header h1 {
-            font-size: 3em;
-            margin: 0;
-            letter-spacing: 3px;
-            animation: slide-up 2s ease-out;
-        }
-
-        @keyframes slide-up {
-            0% {
-                transform: translateY(-50px);
-            }
-            100% {
-                transform: translateY(0);
-            }
-        }
-
-        .header p {
-            font-size: 1.2em;
-            margin-top: 20px;
-            animation: slide-down 2s ease-out;
-        }
-
-        @keyframes slide-down {
-            0% {
-                transform: translateY(50px);
-            }
-            100% {
-                transform: translateY(0);
-            }
-        }
-
-        .container {
-            text-align: center;
-            padding: 20px;
-        }
-
-        .content {
-            margin-top: 50px;
-            text-align: center;
-            animation: fade-in 2s ease-out;
-        }
-
-        .content p {
-            font-size: 1.2em;
-            line-height: 1.6;
-            animation: slide-up 2s ease-out;
-        }
-
-        .features {
-            display: flex;
-            justify-content: center;
-            margin-top: 50px;
-        }
-
-        .feature {
-            flex: 0 1 30%;
-            margin: 0 20px;
-            text-align: center;
-            padding: 20px;
-            border: 2px solid #007bff;
-            border-radius: 10px;
-            transition: transform 0.3s ease;
-            animation: fade-in 2s ease-out;
-        }
-
-        .feature:hover {
-            transform: scale(1.05);
-        }
-
-        .feature h2 {
-            font-size: 1.5em;
-            margin-bottom: 10px;
-        }
-
-        .feature p {
-            font-size: 1.1em;
-        }
-
-        .social-links {
-            margin-top: 20px;
-        }
-
-        .social-links a {
-            display: inline-block;
-            margin: 0 10px;
-            color: #fff;
-            font-size: 1.5em;
-            text-decoration: none;
-            transition: transform 0.3s ease;
-        }
-
-        .social-links a:hover {
-            transform: scale(1.2);
-        }
-
-        /* Blinking animation for text */
-        .blink {
-            animation: blink 1s infinite alternate;
-        }
-
-        @keyframes blink {
-            0% {
-                opacity: 0.5;
-            }
-            100% {
-                opacity: 1;
-            }
-        }
-
-        /* Floating animation for social links */
-        .floating {
-            animation: float 3s ease-in-out infinite;
-        }
-
-        @keyframes float {
-            0%, 100% {
-                transform: translateY(0);
-            }
-            50% {
-                transform: translateY(-10px);
-            }
-        }
-
-        /* Transformer-style animations */
-        .transform-box {
-            transition: all 0.5s ease-in-out;
-        }
-
-        .transform-box:hover {
-            transform: rotate(360deg) scale(1.2);
-            box-shadow: 0 0 20px rgba(0, 123, 255, 0.5);
-        }
-    </style>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header class="header">
-        <h1 class="blink">AIvortx</h1>
-        <p>Your Portal to the Future</p>
+    <header>
+        <h1>Welcome to AIvortx</h1>
     </header>
-    <div class="container">
-        <div class="content">
-            <!-- Page content -->
-            <div id="home">
-                <p>AIvortx is your ultimate destination for cutting-edge artificial intelligence solutions. Harness the power of AI to revolutionize your business, research, and everyday life.</p>
-                <div class="features">
-                    <div class="feature transform-box">
-                        <h2>Advanced Algorithms</h2>
-                        <p>Our AI algorithms are designed to deliver unparalleled performance and accuracy.</p>
-                    </div>
-                    <div class="feature transform-box">
-                        <h2>Machine Learning</h2>
-                        <p>Unlock the potential of machine learning to automate tasks and gain insights from your data.</p>
-                    </div>
-                    <div class="feature transform-box">
-                        <h2>Deep Neural Networks</h2>
-                        <p>Experience the power of deep neural networks for image recognition, natural language processing, and more.</p>
-                    </div>
-                </div>
+    <main>
+        <section id="about">
+            <h2>About AIvortx</h2>
+            <p>AIvortx is an innovative AI platform designed to revolutionize...</p>
+        </section>
+        <section id="video">
+            <h2>Watch AIvortx in Action</h2>
+            <div class="video-container">
+                <!-- Replace 'YOUR_EMBED_CODE' with the actual embed code from YouTube -->
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/WotKMKdSNsc?si=BOKDO8UhLzKuS2I4" frameborder="0" allowfullscreen></iframe>
             </div>
-            
-            <div id="about" style="display: none;">
-                <h2>About Us</h2>
-                <p>We are a team of passionate AI enthusiasts dedicated to pushing the boundaries of artificial intelligence technology.</p>
-            </div>
-
-            <div id="contact" style="display: none;">
-                <h2>Contact Us</h2>
-                <p>Feel free to reach out to us via email at <a href="mailto:info@aivortx.com">info@aivortx.com</a> or through our social media channels:</p>
-                <div class="social-links">
-                    <a href="https://twitter.com/AIvortx" target="_blank" class="floating">Twitter</a>
-                    <a href="https://www.instagram.com/AIvortx/" target="_blank" class="floating">Instagram</a>
-                    <a href="https://www.facebook.com/AIvortx/" target="_blank" class="floating">Facebook</a>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <script>
-        // Function to switch between pages
-        function showPage(pageId) {
-            var pages = document.querySelectorAll('.content > div');
-            for (var i = 0; i < pages.length; i++) {
-                pages[i].style.display = 'none';
-            }
-            document.getElementById(pageId).style.display = 'block';
-        }
-    </script>
-    <script>
-        // Disable right-click
-        document.addEventListener('contextmenu', function(e) {
-            e.preventDefault();
-        });
-
-        // Disable Ctrl+U, Fn+F12, and F12
-        document.onkeydown = function(e) {
-            if (e.ctrlKey && e.keyCode == 'U'.charCodeAt(0) ||
-                e.keyCode == 123 ||
-                e.keyCode == 85 && e.keyCode == 12) {
-                return false;
-            }
-        }
-    </script>
+        </section>
+        <section id="more-info">
+            <h2>More about AIvortx</h2>
+            <p>Explore more about AIvortx on our <a href="https://www.ai-vortx.com">website</a> and follow us on <a href="https://www.youtube.com/channel/AIvortx">YouTube</a> for updates.</p>
+        </section>
+    </main>
 </body>
 </html>
