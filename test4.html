@@ -3,41 +3,40 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Character Morph Animation with Reveal.js</title>
+  <title>Advanced HTML Presentation with Reveal.js</title>
   <!-- Reveal.js CSS -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4/dist/reveal.css">
   <!-- Theme CSS -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4/dist/theme/white.css">
-  <!-- GSAP library -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
-  <!-- Optional: SVG Morph plugin for GSAP -->
-  <script src="https://cdn.jsdelivr.net/npm/gsap/dist/MorphSVGPlugin.min.js"></script>
   <!-- Custom CSS -->
   <style>
     .reveal {
       font-family: Arial, sans-serif; /* Example custom font */
     }
+    .blue-bg { background-color: blue; }
+    .green-bg { background-color: green; }
+    .yellow-bg { background-color: yellow; }
   </style>
 </head>
 <body>
   <div class="reveal">
     <div class="slides">
-      <!-- Slide 1 -->
-      <section>
+      <!-- Slide 1 with blue background and slide-right transition -->
+      <section class="blue-bg" data-transition="slide-right">
         <h1>Slide 1</h1>
-        <!-- SVG for character morph -->
-        <svg id="shape1" width="100" height="100">
-          <circle cx="50" cy="50" r="30" fill="blue" />
-        </svg>
+        <p>Content for slide 1...</p>
       </section>
       
-      <!-- Slide 2 -->
-      <section>
+      <!-- Slide 2 with green background and zoom transition -->
+      <section class="green-bg" data-transition="zoom">
         <h1>Slide 2</h1>
-        <!-- SVG for character morph -->
-        <svg id="shape2" width="100" height="100" style="display: none;">
-          <rect x="20" y="20" width="60" height="60" fill="green" />
-        </svg>
+        <p>Content for slide 2...</p>
+      </section>
+      
+      <!-- Slide 3 with yellow background and fade transition -->
+      <section class="yellow-bg" data-transition="fade">
+        <h1>Slide 3</h1>
+        <p>Content for slide 3...</p>
       </section>
       
       <!-- Add more slides as needed -->
@@ -54,16 +53,8 @@
       progress: true,
       center: true,
       hash: true,
+      transition: 'slide', // Default transition for slides
       // Add more options as needed
-    });
-
-    // GSAP animation for morphing SVG shapes
-    gsap.to('#shape1', {
-      duration: 2,
-      morphSVG: '#shape2', // Morph from shape1 to shape2
-      ease: "power1.inOut",
-      repeat: -1, // Example: Repeat infinitely
-      yoyo: true // Example: Yoyo back and forth
     });
   </script>
 </body>
